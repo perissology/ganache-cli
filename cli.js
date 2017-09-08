@@ -61,7 +61,7 @@ if (argv.mem === true) {
 }
 
 var options = {
-  port: argv.p || argv.port || "8545",
+  port: argv.p || argv.port || (argv.ws) ? "8546" : "8545",
   hostname: argv.h || argv.hostname,
   debug: argv.debug,
   seed: argv.s || argv.seed,
@@ -77,7 +77,8 @@ var options = {
   verbose: argv.v || argv.verbose,
   secure: argv.n || argv.secure || false,
   db_path: argv.db || null,
-  logger: logger
+  logger: logger,
+  ws: argv.ws || null
 }
 
 var fork_address;
@@ -166,7 +167,11 @@ server.listen(options.port, options.hostname, function(err, state) {
   }
 
   console.log("");
-  console.log("Listening on " + (options.hostname || "localhost") + ":" + options.port);
+  if (options.ws) {
+    console.log("Websocket server listening on " + (options.hostname || "localhost") + ":" + options.port);
+  } else {
+    console.log("Listening on " + (options.hostname || "localhost") + ":" + options.port);
+  }
 });
 
 process.on('uncaughtException', function(e) {

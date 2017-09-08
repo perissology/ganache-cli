@@ -33,7 +33,7 @@ Options:
 * `-d` or `--deterministic`: Generate deterministic addresses based on a pre-defined mnemonic.
 * `-n` or `--secure`: Lock available accounts by default (good for third party transaction signing)
 * `-m` or `--mnemonic`: Use a specific HD wallet mnemonic to generate initial addresses.
-* `-p` or `--port`: Port number to listen on. Defaults to 8545.
+* `-p` or `--port`: Port number to listen on. Defaults to 8545 if http server. Defaults to 8546 if websocket server
 * `-h` or `--hostname`: Hostname to listen on. Defaults to Node's `server.listen()` [default](https://nodejs.org/api/http.html#http_server_listen_port_hostname_backlog_callback).
 * `-s` or `--seed`: Use arbitrary data to generate the HD wallet mnemonic to be used.
 * `-g` or `--gasPrice`: Use a custom Gas Price (defaults to 20000000000)
@@ -43,6 +43,7 @@ Options:
 * `--db`: Specify a path to a directory to save the chain database. If a database already exists, the TestRPC will initialize that chain instead of creating a new one.
 * `--debug`: Output VM opcodes for debugging
 * `--mem`: Output TestRPC memory usage statistics. This replaces normal output.
+* `--ws`: Enable the WS-RPC server. The HTTP-RPC server will not be enabled.
 
 Special Options:
 

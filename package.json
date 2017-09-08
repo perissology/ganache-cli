@@ -19,7 +19,7 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "ganache-core": "1.1.2",
+    "ganache-core": "git://github.com/perissology/ganache-core.git",
     "yargs": "^7.0.2"
   },
   "repository": {
