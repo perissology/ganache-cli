@@ -11,10 +11,11 @@ module.exports = {
   output: {
     path: outputDir,
     filename: outputFilename,
-    library: "TestRPC",
+    library: "ganache",
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  devtool: 'source-map',
   resolve: {
     alias: {
       "ws": path.join(__dirname, "..", "./nil.js"),
