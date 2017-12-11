@@ -113,7 +113,7 @@ var options = {
   secure: argv.n || argv.secure || false,
   db_path: argv.db || null,
   account_keys_path: argv.acctKeys || null,
-  logger: logger
+  logger: logger,
   ws: argv.ws || null
 }
 

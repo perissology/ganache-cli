@@ -1,6 +1,6 @@
 {
   "name": "ganache-cli",
-  "version": "6.0.3",
+  "version": "5.0.3",
   "bin": {
     "ganache-cli": "./build/cli.node.js"
   },
@@ -19,7 +19,7 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "ganache-core": "git://github.com/perissology/ganache-core.git",
+    "ganache-core": "git://github.com/perissology/ganache-core.git#3b3c8f5",
     "yargs": "^7.0.2"
   },
   "repository": {
